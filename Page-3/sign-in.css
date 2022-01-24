@@ -41,11 +41,6 @@
     top:30%;
     transform: translateY(-50%);
 }
-@media (max-width:991px) {
-    .sign-in{
-        width: 80%;
-    }
-}
 .sign-in form h3{
   margin-bottom: 20px;
   color: #ffc107;

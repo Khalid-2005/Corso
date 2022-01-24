@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Avenir Next', 'Roboto', 'Verdana';
+}
+.header{
+    position: relative;
+    background-image:url(../web/images/header-background.jpg) ;
+    width: 100%;
+    height: 100vh;
+}
+.header::before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.705);
+  width: 100%;
+  height: 100%;
+}
+.header-logo{
+    position: relative;
+    z-index: 1;
+    margin: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo img{
+   width: 100px;
+   height: 100px;
+}
+.sign-in{
+    position: relative;
+    margin: 50px auto;
+    background-color: white;
+    width: fit-content;
+    padding: 40px;
+    border-radius: 7px;
+    top:30%;
+    transform: translateY(-50%);
+}
+@media (max-width:991px) {
+    .sign-in{
+        width: 80%;
+    }
+}
+.sign-in form h3{
+  margin-bottom: 20px;
+  color: #ffc107;
+  
+}
+.sign-in .user-name{
+    position: relative;
+    margin-bottom: 20px;
+}
+.sign-in form .user-name i{
+  position:absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 18px;
+  color: #999999;
+  
+}
+.sign-in .user-name input{
+    width: 500px;
+    padding: 10px 0 10px 33px;
+    border: 1px solid #999999;
+    border-radius: 10px;
+}
+.sign-in .user-name input::placeholder{
+    transition: 0.3s;
+    opacity: 1;
+}
+.sign-in .user-name input:focus::placeholder{
+    opacity: 0;
+}
+.sign-in .user-name p{
+    text-align: end;
+    font-size: 12px;
+    margin-top: 7px;
+    color: #999999;
+    cursor: pointer;
+}
+.sign-in .user-name:hover i{
+   color: #ffc107;
+}
+.sign-in button{
+    width: 500px;
+    padding: 10px;
+    background-color: #ffbd50; 
+    outline: 0;
+    border: 0;   
+    border-radius: 7px;
+    color: white;
+    font-size: 18px;
+    margin-top: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.sign-in button::before{
+    position: absolute;
+    right: 55px;
+    top: 13px;
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    content: "\f061";
+    opacity: 0;
+    transform: 0.3s;
+}
+.sign-in button:hover::before{
+    opacity: 1;
+    animation: move linear forwards 0.3s;
+}
+.sign-in button:hover{
+    background-color: #ffb237;
+}
+@keyframes move {
+    100%{
+        right: 50px;
+    }
+}
